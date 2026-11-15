@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sojourner | Forgotten Space</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .story-page {
+            max-width: 1000px;
+            margin: auto;
+            padding: 45px 24px 70px;
+        }
+
+        .story-hero {
+            text-align: center;
+            padding: 65px 20px 45px;
+        }
+
+        .story-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin: 12px 0;
+        }
+
+        .story-hero p {
+            max-width: 720px;
+            margin: 10px auto;
+            line-height: 1.8;
+        }
+
+        .story-section {
+            margin: 55px 0;
+            line-height: 1.8;
+        }
+
+        .story-section h2 {
+            margin-bottom: 15px;
+            color: #8ecbff;
+        }
+
+        .image-container {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .story-image {
+            width: 100%;
+            max-height: 500px;
+            min-height: 220px;
+            object-fit: contain;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #14243d, #263c58);
+            display: block;
+        }
+
+        .image-caption {
+            font-size: .85rem;
+            opacity: .75;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .image-error {
+            padding: 35px 15px;
+            text-align: center;
+            color: #c4d5e8;
+            background: rgba(255,255,255,.06);
+            border-radius: 16px;
+        }
+
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 15px;
+            margin-top: 22px;
+        }
+
+        .fact {
+            padding: 20px;
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 12px;
+        }
+
+        .fact strong {
+            display: block;
+            color: #8ecbff;
+            margin-bottom: 7px;
+        }
+
+        /* INTERACTIVE TIMELINE */
+
+        .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 22px 0;
+        }
+
+        .timeline button {
+            background: rgba(255,255,255,.08);
+            color: white;
+            border: 1px solid rgba(255,255,255,.2);
+            padding: 11px 15px;
+            border-radius: 24px;
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .timeline button:hover,
+        .timeline button.active {
+            background: #287fc4;
+            border-color: #287fc4;
+        }
+
+        .timeline-detail {
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 15px;
+            padding: 23px;
+            min-height: 135px;
+        }
+
+        .timeline-detail h3 {
+            color: #8ecbff;
+            margin-bottom: 9px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 25px 0;
+            color: #8ecbff;
+            text-decoration: none;
+        }
+
+        .source-list a {
+            color: #8ecbff;
+        }
+
+        @media (max-width: 600px) {
+            .story-page {
+                padding: 30px 16px 50px;
+            }
+
+            .story-section {
+                margin: 40px 0;
+            }
+
+            .timeline button {
+                font-size: 12px;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            FORGOTTEN<span>SPACE</span>
+        </a>
+
+        <a href="index.html">
+            ← Back to Home
+        </a>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <header class="story-hero">
+
+        <p class="eyebrow">
+            THE MARS ARCHIVE · 1997
+        </p>
+
+        <h1>Sojourner</h1>
+
+        <p>
+            The little rover that made history as the first successful
+            wheeled robotic rover to operate on Mars.
+        </p>
+
+    </header>
+
+
+    <main class="story-page">
+
+
+        <!-- SPACECRAFT IMAGE -->
+
+        <div class="image-container">
+
+            <img
+                class="story-image"
+                id="mission-image"
+                src="https://images-assets.nasa.gov/image/PIA01555/PIA01555~orig.jpg"
+                alt="NASA Mars Pathfinder and Sojourner rover"
+                loading="eager"
+            >
+
+            <p class="image-caption" id="image-caption">
+                Mars Pathfinder mission · NASA
+            </p>
+
+        </div>
+
+
+        <!-- SECTION 01 -->
+
+        <section class="story-section">
+
+            <h2>01 — The Beginning</h2>
+
+            <p>
+                On July 4, 1997, NASA's Mars Pathfinder spacecraft landed
+                on the surface of Mars. It carried a small robotic rover
+                named Sojourner.
+            </p>
+
+            <p>
+                Sojourner was designed to explore the surrounding terrain,
+                examine Martian rocks and soil, and send scientific
+                information back to Earth.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION 02 -->
+
+        <section class="story-section">
+
+            <h2>02 — Mission at a Glance</h2>
+
+            <div class="fact-grid">
+
+                <div class="fact">
+                    <strong>Launch</strong>
+                    December 4, 1996
+                </div>
+
+                <div class="fact">
+                    <strong>Mars Landing</strong>
+                    July 4, 1997
+                </div>
+
+                <div class="fact">
+                    <strong>Mission</strong>
+                    Mars Pathfinder
+                </div>
+
+                <div class="fact">
+                    <strong>Agency</strong>
+                    NASA
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 03: TIMELINE -->
+
+        <section class="story-section">
+
+            <h2>03 — Interactive Mission Timeline</h2>
+
+            <p>
+                Follow Sojourner's journey from Earth to the Martian surface.
+                Click each date to uncover a milestone.
+            </p>
+
+            <div class="timeline" id="timeline-buttons"></div>
+
+            <div
+                class="timeline-detail"
+                id="timeline-detail"
+                aria-live="polite"
+            ></div>
+
+        </section>
+
+
+        <!-- SECTION 04 -->
+
+        <section class="story-section">
+
+            <h2>04 — What Did It Discover?</h2>
+
+            <p>
+                Sojourner examined Martian rocks and soil using its
+                scientific instruments. Its observations helped scientists
+                study the composition of rocks and understand the geology
+                of the landing area.
+            </p>
+
+            <p>
+                The mission also demonstrated that a small mobile robot
+                could successfully explore another planet and communicate
+                its findings to Earth.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION 05 -->
+
+        <section class="story-section">
+
+            <h2>05 — Why Was It Left Behind?</h2>
+
+            <p>
+                Sojourner was not designed to return to Earth. It operated
+                as part of the Mars Pathfinder mission, using the lander
+                as its communication link to Earth.
+            </p>
+
+            <p>
+                After communication with the Pathfinder lander was lost
+                in September 1997, the mission ended. Sojourner remained
+                on Mars, becoming one of the planet's historic
+                human-made artifacts.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION 06 -->
+
+        <section class="story-section">
+
+            <h2>06 — Its Legacy</h2>
+
+            <p>
+                Sojourner helped prove that robotic rovers could explore
+                the Martian surface. Its success helped pave the way for
+                later missions, including Spirit, Opportunity, Curiosity,
+                and Perseverance.
+            </p>
+
+            <p>
+                Although its mission ended decades ago, its contribution
+                to Mars exploration continues to matter.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION 07 -->
+
+        <section class="story-section">
+
+            <h2>07 — Still on Mars</h2>
+
+            <p>
+                Sojourner remains on Mars near the Pathfinder landing
+                site. It is no longer operating, but it is still part
+                of the history of planetary exploration.
+            </p>
+
+        </section>
+
+
+        <!-- NASA SOURCES -->
+
+        <section class="story-section source-list">
+
+            <h2>Explore the Original Records</h2>
+
+            <p>
+                Learn more about Sojourner and the Mars Pathfinder mission:
+            </p>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="https://science.nasa.gov/mission/mars-pathfinder/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        NASA — Mars Pathfinder
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://science.nasa.gov/solar-system/mars/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        NASA — Mars Exploration
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://images.nasa.gov/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        NASA Image and Video Library
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- BACK BUTTON -->
+
+        <a class="back-link" href="index.html">
+            ← Return to the Forgotten Space archive
+        </a>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        // =====================================
+        // SOJOURNER MISSION TIMELINE
+        // =====================================
+
+        const events = [
+
+            {
+                date: "December 4, 1996",
+                title: "The Journey Begins",
+                description:
+                    "NASA launched Mars Pathfinder aboard a Delta II rocket. Its destination was Mars, carrying the Sojourner rover for a historic exploration mission."
+            },
+
+            {
+                date: "July 4, 1997",
+                title: "Landing on Mars",
+                description:
+                    "Mars Pathfinder successfully landed at Ares Vallis on Mars. Its airbag landing system helped protect the spacecraft during touchdown."
+            },
+
+            {
+                date: "July 5, 1997",
+                title: "Sojourner Takes Its First Drive",
+                description:
+                    "Sojourner rolled down a ramp from the lander and began exploring the Martian surface. It became the first successful wheeled rover to operate on another planet."
+            },
+
+            {
+                date: "September 18, 1997",
+                title: "A Record Journey",
+                description:
+                    "Sojourner travelled more than 12 metres from its lander, reaching a mission record. It had already operated far beyond its planned seven-day mission."
+            },
+
+            {
+                date: "September 27, 1997",
+                title: "The Final Signal",
+                description:
+                    "NASA received the final data transmission from Mars Pathfinder. Sojourner had operated for 83 days, leaving behind a remarkable legacy in planetary exploration."
+            }
+
+        ];
+
+
+        const holder =
+            document.getElementById("timeline-buttons");
+
+        const detail =
+            document.getElementById("timeline-detail");
+
+
+        // DISPLAY SELECTED EVENT
+
+        function showEvent(index) {
+
+            const event = events[index];
+
+            detail.innerHTML = `
+                <h3>${event.date} — ${event.title}</h3>
+                <p>${event.description}</p>
+            `;
+
+            holder.querySelectorAll("button").forEach(
+                (button, i) => {
+
+                    button.classList.toggle(
+                        "active",
+                        i === index
+                    );
+
+                }
+            );
+
+        }
+
+
+        // CREATE TIMELINE BUTTONS
+
+        events.forEach((event, index) => {
+
+            const button = document.createElement("button");
+
+            button.type = "button";
+
+            button.textContent = event.date;
+
+            button.addEventListener("click", () => {
+                showEvent(index);
+            });
+
+            holder.appendChild(button);
+
+        });
+
+
+        // SHOW FIRST EVENT BY DEFAULT
+
+        showEvent(0);
+
+
+        // =====================================
+        // IMAGE FALLBACK SYSTEM
+        // =====================================
+
+        const missionImage =
+            document.getElementById("mission-image");
+
+        const imageCaption =
+            document.getElementById("image-caption");
+
+
+        missionImage.addEventListener("error", function () {
+
+            if (this.dataset.fallbackUsed !== "true") {
+
+                this.dataset.fallbackUsed = "true";
+
+                this.src =
+                    "https://commons.wikimedia.org/wiki/Special:FilePath/Sojourner_on_Mars.jpg";
+
+                imageCaption.textContent =
+                    "Sojourner rover on Mars · NASA";
+
+            } else {
+
+                this.style.display = "none";
+
+                imageCaption.innerHTML = `
+                    <div class="image-error">
+                        <p>Spacecraft image is currently unavailable.</p>
+                        <p>The mission story and timeline are still available.</p>
+                    </div>
+                `;
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

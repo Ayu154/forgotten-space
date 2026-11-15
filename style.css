@@ -1,0 +1,516 @@
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080d18;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 75px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 8%;
+
+    background: #080d18;
+}
+
+.logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #77b9e8;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: #b9c5d5;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #77b9e8;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    padding: 140px 10% 50px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            ellipse at 75% 45%,
+            #344c76 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            ellipse at 90% 80%,
+            #382a58 0%,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            120deg,
+            #080d18,
+            #111d34
+        );
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    color: #77b9e8;
+    font-size: 12px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+
+.hero-description {
+    max-width: 470px;
+
+    color: #b5c1d2;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+}
+
+.explore-button {
+    display: inline-block;
+
+    padding: 16px 25px;
+
+    color: #07111f;
+    background: #77b9e8;
+
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.explore-button:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+
+
+
+/* =========================
+   COMMON SECTIONS
+========================= */
+
+.destinations,
+.artifacts {
+    padding: 100px 8%;
+}
+
+.section-heading {
+    margin-bottom: 40px;
+}
+
+.section-heading h2,
+.about h2 {
+    font-size: clamp(30px, 4vw, 45px);
+    margin-bottom: 15px;
+}
+
+.section-heading > p:last-child,
+.about > p:last-child {
+    color: #9ba9bc;
+    line-height: 1.7;
+}
+
+/* =========================
+   DESTINATION CARDS
+========================= */
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.destination-card {
+    min-height: 300px;
+    padding: 25px;
+    border: 1px solid #283750;
+    color: white;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    cursor: pointer;
+    transition: 0.3s;
+
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Dark overlay for readable text */
+.destination-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(4, 9, 18, 0.95),
+        rgba(4, 9, 18, 0.15)
+    );
+    z-index: 0;
+}
+
+.destination-card > * {
+    position: relative;
+    z-index: 1;
+}
+
+.destination-card:hover {
+    transform: translateY(-8px);
+    border-color: #77b9e8;
+}
+
+/* Moon */
+.moon {
+    background-image: url("https://images-assets.nasa.gov/image/PIA00405/PIA00405~orig.jpg");
+}
+
+/* Mars */
+.mars {
+    background-image: url("https://images-assets.nasa.gov/image/PIA26206/PIA26206~orig.jpg");
+}
+
+/* Deep Space */
+.deep {
+    background-image: url("https://images-assets.nasa.gov/image/PIA17046/PIA17046~orig.jpg");
+}
+
+.destination-number {
+    color: #d5e4f5;
+    font-size: 13px;
+}
+
+.destination-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.destination-info strong {
+    font-size: 25px;
+}
+
+.destination-info small {
+    color: #bdc8d6;
+}
+
+/* =========================
+   FILTER BUTTONS
+========================= */
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background: transparent;
+    color: #aab8cb;
+
+    border: 1px solid #35435b;
+
+    padding: 10px 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #77b9e8;
+    color: #08111f;
+    border-color: #77b9e8;
+}
+
+
+/* =========================
+   ARTIFACT CARDS
+========================= */
+
+.artifact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.artifact-card {
+    background: #111b2b;
+
+    border: 1px solid #26354b;
+
+    transition: 0.3s;
+}
+
+.artifact-card:hover {
+    transform: translateY(-6px);
+}
+
+.artifact-card.hidden {
+    display: none;
+}
+
+
+/* NASA IMAGE CONTAINERS */
+
+.artifact-image {
+    height: 190px;
+
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #283c55,
+        #101a2b
+    );
+}
+
+.artifact-image img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s;
+}
+
+.artifact-card:hover .artifact-image img {
+    transform: scale(1.08);
+}
+
+.artifact-image span {
+    position: relative;
+    z-index: 1;
+
+    background: rgba(0, 0, 0, 0.65);
+
+    padding: 7px 10px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #ffffff;
+}
+
+
+/* FALLBACK BACKGROUNDS */
+
+.sojourner {
+    background: linear-gradient(
+        135deg,
+        #9c543b,
+        #32252b
+    );
+}
+
+.spirit {
+    background: linear-gradient(
+        135deg,
+        #a65b3d,
+        #29202a
+    );
+}
+
+.pioneer {
+    background: linear-gradient(
+        135deg,
+        #45426d,
+        #141b31
+    );
+}
+
+
+/* ARTIFACT INFORMATION */
+
+.artifact-info {
+    padding: 20px;
+}
+
+.artifact-info h3 {
+    margin-bottom: 12px;
+}
+
+.artifact-info p {
+    color: #9ba9bc;
+
+    font-size: 13px;
+    line-height: 1.7;
+
+    min-height: 70px;
+}
+
+.artifact-info a {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    color: #77b9e8;
+
+    text-decoration: none;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+.about {
+    padding: 100px 12%;
+    background: #101a2b;
+}
+
+.about > p:last-child {
+    max-width: 650px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 30px 8%;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #8292aa;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 850px) {
+
+    .artifact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .navbar {
+        padding: 0 5%;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 120px 7% 80px;
+    }
+
+    .destinations,
+    .artifacts {
+        padding: 70px 6%;
+    }
+
+    .artifact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+}

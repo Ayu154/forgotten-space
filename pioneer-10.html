@@ -1,0 +1,579 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pioneer 10 | Forgotten Space</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .story-page {
+            max-width: 1000px;
+            margin: auto;
+            padding: 45px 24px 70px;
+        }
+
+        .story-hero {
+            text-align: center;
+            padding: 65px 20px 45px;
+        }
+
+        .story-hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            margin: 12px 0;
+        }
+
+        .story-hero p {
+            max-width: 720px;
+            margin: 10px auto;
+            line-height: 1.8;
+        }
+
+        .story-section {
+            margin: 55px 0;
+            line-height: 1.8;
+        }
+
+        .story-section h2 {
+            margin-bottom: 15px;
+            color: #8ecbff;
+        }
+
+        .image-container {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+
+        .story-image {
+            width: 100%;
+            max-height: 500px;
+            min-height: 220px;
+            object-fit: contain;
+            border-radius: 16px;
+            background: linear-gradient(135deg, #14243d, #263c58);
+            display: block;
+        }
+
+        .image-caption {
+            font-size: .85rem;
+            opacity: .75;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 15px;
+            margin-top: 22px;
+        }
+
+        .fact {
+            padding: 20px;
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 12px;
+        }
+
+        .fact strong {
+            display: block;
+            color: #8ecbff;
+            margin-bottom: 7px;
+        }
+
+        .timeline {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 22px 0;
+        }
+
+        .timeline button {
+            background: rgba(255,255,255,.08);
+            color: white;
+            border: 1px solid rgba(255,255,255,.2);
+            padding: 11px 15px;
+            border-radius: 24px;
+            cursor: pointer;
+        }
+
+        .timeline button:hover,
+        .timeline button.active {
+            background: #287fc4;
+            border-color: #287fc4;
+        }
+
+        .timeline-detail {
+            background: rgba(255,255,255,.07);
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 15px;
+            padding: 23px;
+            min-height: 135px;
+        }
+
+        .timeline-detail h3 {
+            color: #8ecbff;
+            margin-bottom: 9px;
+        }
+
+        .source-list a,
+        .back-link {
+            color: #8ecbff;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 25px 0;
+            text-decoration: none;
+        }
+
+        .image-error {
+            padding: 35px 15px;
+            text-align: center;
+            color: #c4d5e8;
+            background: rgba(255,255,255,.06);
+            border-radius: 16px;
+        }
+
+        @media (max-width: 600px) {
+            .story-page {
+                padding: 30px 16px 50px;
+            }
+
+            .story-section {
+                margin: 40px 0;
+            }
+
+            .timeline button {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            FORGOTTEN<span>SPACE</span>
+        </a>
+
+        <a href="index.html">
+            ← Back to Home
+        </a>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+    <header class="story-hero">
+
+        <p class="eyebrow">
+            THE DEEP SPACE ARCHIVE · 1972–2003
+        </p>
+
+        <h1>Pioneer 10</h1>
+
+        <p>
+            The first spacecraft to fly past Jupiter,
+            cross the asteroid belt and set out
+            beyond the outer planets.
+        </p>
+
+    </header>
+
+
+    <main class="story-page">
+
+        <!-- SPACECRAFT IMAGE -->
+        <div class="image-container">
+
+            <img
+                class="story-image"
+                id="mission-image"
+                src="https://images-assets.nasa.gov/image/ARC-1972-AC72-2134/ARC-1972-AC72-2134~orig.jpg"
+                alt="Pioneer 10 spacecraft"
+                loading="eager"
+            >
+
+            <p class="image-caption" id="image-caption">
+                Pioneer 10 spacecraft · NASA Ames Research Center
+            </p>
+
+        </div>
+
+
+        <!-- SECTION 01 -->
+        <section class="story-section">
+
+            <h2>01 — The Beginning</h2>
+
+            <p>
+                Pioneer 10 was an uncrewed NASA spacecraft
+                launched in March 1972. Its main goal was
+                to make the first close-up study of Jupiter.
+
+                It was built to investigate the giant planet
+                and its environment, while testing whether
+                a spacecraft could safely travel through the
+                asteroid belt and the intense radiation near Jupiter.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION 02 -->
+        <section class="story-section">
+
+            <h2>02 — Mission at a Glance</h2>
+
+            <div class="fact-grid">
+
+                <div class="fact">
+                    <strong>Launch</strong>
+                    March 2, 1972
+                </div>
+
+                <div class="fact">
+                    <strong>Primary Target</strong>
+                    Jupiter
+                </div>
+
+                <div class="fact">
+                    <strong>Closest Jupiter Approach</strong>
+                    December 4, 1973
+                </div>
+
+                <div class="fact">
+                    <strong>Routine Contact Ended</strong>
+                    March 31, 1997
+                </div>
+
+                <div class="fact">
+                    <strong>Last Signal Received</strong>
+                    January 23, 2003
+                </div>
+
+                <div class="fact">
+                    <strong>Planned Mission</strong>
+                    About 21 months
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SECTION 03 -->
+        <section class="story-section">
+
+            <h2>03 — Interactive Mission Timeline</h2>
+
+            <p>
+                Choose a milestone to follow this artifact's journey.
+            </p>
+
+            <div class="timeline" id="timeline-buttons"></div>
+
+            <div
+                class="timeline-detail"
+                id="timeline-detail"
+                aria-live="polite"
+            ></div>
+
+        </section>
+
+
+        <!-- SECTION 04 -->
+        <section class="story-section">
+
+            <h2>04 — What Did It Help Us Discover?</h2>
+
+            <p>
+                Pioneer 10 returned the first close-up images
+                of Jupiter and measured its atmosphere,
+                magnetic field, magnetosphere and radiation
+                environment.
+
+                These observations helped scientists
+                understand the giant planet and informed
+                the design of later missions that travelled
+                to Jupiter, including Voyager and Galileo.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION 05 -->
+        <section class="story-section">
+
+            <h2>05 — Why Was It Left Behind?</h2>
+
+            <p>
+                Pioneer 10 was never intended to land or
+                return to Earth.
+
+                After completing its Jupiter encounter,
+                it continued outward through the outer
+                solar system.
+
+                Its radioisotope power source gradually
+                produced less electricity, eventually
+                leaving too little power for its transmitter
+                to send a detectable signal.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION 06 -->
+        <section class="story-section">
+
+            <h2>06 — Where Is It Now?</h2>
+
+            <p>
+                Pioneer 10 is no longer communicating
+                with Earth.
+
+                Its last faint signal was received on
+                January 23, 2003, when it was about
+                7.6 billion miles (12.23 billion kilometres)
+                away.
+
+                It continues to coast silently along
+                its trajectory.
+            </p>
+
+        </section>
+
+
+        <!-- SECTION 07 -->
+        <section class="story-section">
+
+            <h2>07 — Its Legacy</h2>
+
+            <p>
+                Pioneer 10 opened the way for exploration
+                of the outer planets.
+
+                It also carried a plaque with diagrams
+                intended to communicate information
+                about humanity and Earth's location
+                if the spacecraft were ever found by
+                an intelligent civilization.
+            </p>
+
+        </section>
+
+
+        <!-- NASA SOURCES -->
+        <section class="story-section source-list">
+
+            <h2>Explore the Original Records</h2>
+
+            <p>
+                NASA sources used to check the mission
+                history and facts:
+            </p>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="https://science.nasa.gov/mission/pioneer-10/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        NASA Science — Pioneer 10
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.nasa.gov/history/50-years-ago-pioneer-10-launches-to-explore-jupiter/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        NASA — 50 Years Ago: Pioneer 10 Launches
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://science.nasa.gov/missions/pioneer/pioneer-10-sends-last-signal/"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        NASA — Pioneer 10 Sends Last Signal
+                    </a>
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- BACK BUTTON -->
+        <a class="back-link" href="index.html">
+            ← Return to the Forgotten Space archive
+        </a>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // =====================================
+        // PIONEER 10 MISSION TIMELINE
+        // =====================================
+
+        const events = [
+
+            {
+                date: "March 2, 1972",
+                title: "Pioneer 10 Begins Its Journey",
+                description:
+                    "NASA launched Pioneer 10 from Cape Canaveral, Florida. Its mission was to travel through the asteroid belt and investigate Jupiter up close."
+            },
+
+            {
+                date: "July 15, 1972",
+                title: "Into the Asteroid Belt",
+                description:
+                    "Pioneer 10 entered the main asteroid belt. Its successful passage helped demonstrate that spacecraft could travel through this region."
+            },
+
+            {
+                date: "December 4, 1973",
+                title: "First Close Encounter with Jupiter",
+                description:
+                    "Pioneer 10 made the first successful close flyby of Jupiter, returning images and measurements of the planet and its powerful magnetic and radiation environment."
+            },
+
+            {
+                date: "June 13, 1983",
+                title: "Beyond Neptune's Orbit",
+                description:
+                    "Pioneer 10 crossed the orbit of Neptune, then considered the outermost planet. It became the first human-made spacecraft to travel beyond the orbit of the outermost known planet."
+            },
+
+            {
+                date: "March 31, 1997",
+                title: "Routine Communications End",
+                description:
+                    "NASA ended routine contact with Pioneer 10. Intermittent tracking and attempts to receive data continued afterward."
+            },
+
+            {
+                date: "January 23, 2003",
+                title: "The Final Faint Signal",
+                description:
+                    "Earth received Pioneer 10's last signal. Its power source had weakened so much that the spacecraft could no longer keep its radio transmitter operating."
+            }
+
+        ];
+
+
+        const holder =
+            document.getElementById("timeline-buttons");
+
+        const detail =
+            document.getElementById("timeline-detail");
+
+
+        // Display selected timeline event
+        function showEvent(index) {
+
+            const event = events[index];
+
+            detail.innerHTML = `
+                <h3>${event.date} — ${event.title}</h3>
+                <p>${event.description}</p>
+            `;
+
+            holder
+                .querySelectorAll("button")
+                .forEach((button, i) => {
+
+                    button.classList.toggle(
+                        "active",
+                        i === index
+                    );
+
+                });
+
+        }
+
+
+        // Create timeline buttons
+        events.forEach((event, index) => {
+
+            const button = document.createElement("button");
+
+            button.type = "button";
+
+            button.textContent = event.date;
+
+            button.addEventListener("click", () => {
+                showEvent(index);
+            });
+
+            holder.appendChild(button);
+
+        });
+
+
+        // Show first event by default
+        showEvent(0);
+
+
+        // =====================================
+        // IMAGE FALLBACK SYSTEM
+        // =====================================
+
+        const missionImage =
+            document.getElementById("mission-image");
+
+        const imageCaption =
+            document.getElementById("image-caption");
+
+
+        // If the NASA image fails, try a second image
+        missionImage.addEventListener("error", function () {
+
+            if (this.dataset.fallbackUsed !== "true") {
+
+                this.dataset.fallbackUsed = "true";
+
+                this.src =
+                    "https://commons.wikimedia.org/wiki/Special:FilePath/Pioneer_10_at_Jupiter.jpg";
+
+                imageCaption.textContent =
+                    "Pioneer 10 encountering Jupiter · NASA";
+
+            } else {
+
+                this.style.display = "none";
+
+                imageCaption.innerHTML = `
+                    <div class="image-error">
+                        <p>Spacecraft image is currently unavailable.</p>
+                        <p>The mission archive and timeline are still available.</p>
+                    </div>
+                `;
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

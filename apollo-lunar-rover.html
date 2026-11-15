@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apollo Lunar Rover | Forgotten Space</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.story-page{max-width:1000px;margin:auto;padding:45px 24px 70px}
+.story-hero{text-align:center;padding:65px 20px 45px}
+.story-hero h1{font-size:clamp(2.5rem,6vw,4.5rem);margin:12px 0}
+.story-hero p{max-width:720px;margin:10px auto;line-height:1.8}
+.story-section{margin:55px 0;line-height:1.8}
+.story-section h2{margin-bottom:15px;color:#8ecbff}
+.story-image{width:100%;max-height:460px;min-height:220px;object-fit:cover;border-radius:16px;background:linear-gradient(135deg,#14243d,#263c58)}
+.image-caption{font-size:.85rem;opacity:.75;margin-top:8px}
+.fact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:15px;margin-top:22px}
+.fact{padding:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px}
+.fact strong{display:block;color:#8ecbff;margin-bottom:7px}
+.timeline{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.timeline button{background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.2);padding:11px 15px;border-radius:24px;cursor:pointer}
+.timeline button:hover,.timeline button.active{background:#287fc4;border-color:#287fc4}
+.timeline-detail{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:15px;padding:23px;min-height:135px}
+.timeline-detail h3{color:#8ecbff;margin-bottom:9px}
+.source-list a,.back-link{color:#8ecbff}
+.back-link{display:inline-block;margin:25px 0;text-decoration:none}
+</style>
+</head>
+<body>
+<nav class="navbar"><a href="index.html" class="logo">FORGOTTEN<span>SPACE</span></a><a href="index.html">← Back to Home</a></nav>
+<header class="story-hero"><p class="eyebrow">THE MOON ARCHIVE · 1971–1972</p><h1>Apollo Lunar Rover</h1><p>The battery-powered vehicle that let Apollo astronauts travel farther across the Moon and bring more of its story home.</p></header>
+<main class="story-page">
+<img class="story-image" id="mission-image" alt="Apollo Lunar Rover">
+<p class="image-caption" id="image-caption">Searching NASA's Image and Video Library…</p>
+<section class="story-section"><h2>01 — The Beginning</h2><p>The Lunar Roving Vehicle (LRV), often called the Moon buggy, was a lightweight electric vehicle carried to the Moon on Apollo 15, Apollo 16 and Apollo 17. Folded for transport in the Lunar Module, it was unfolded by astronauts after landing. It carried astronauts, tools and lunar samples across terrain that would have been difficult to explore on foot.</p></section>
+<section class="story-section"><h2>02 — Mission at a Glance</h2><div class="fact-grid"><div class="fact"><strong>First lunar use</strong>Apollo 15 · July 1971</div><div class="fact"><strong>Used on</strong>Apollo 15, 16 and 17</div><div class="fact"><strong>Type</strong>Battery-powered electric rover</div><div class="fact"><strong>Vehicles driven on Moon</strong>Three</div><div class="fact"><strong>Longest mission distance</strong>35.9 km · Apollo 17</div></div></section>
+<section class="story-section"><h2>03 — Interactive Mission Timeline</h2><p>Choose a milestone to follow this artifact's journey.</p><div class="timeline" id="timeline-buttons"></div><div class="timeline-detail" id="timeline-detail" aria-live="polite"></div></section>
+<section class="story-section"><h2>04 — What Did It Help Us Discover?</h2><p>The rover extended the distance astronauts could travel from their landing sites. Crews could visit more geological features, collect a wider range of lunar samples and carry scientific equipment. NASA's records report that the Apollo 17 rover covered 35.9 kilometres in total.</p></section>
+<section class="story-section"><h2>05 — Why Was It Left Behind?</h2><p>The LRV was designed for surface exploration, not a return journey to Earth. The astronauts used the Lunar Module to leave the Moon, while the rover stayed at the landing site. Bringing a bulky vehicle home was not part of the mission design.</p></section>
+<section class="story-section"><h2>06 — Where Is It Now?</h2><p>Three LRVs remain on the Moon at the Apollo 15, Apollo 16 and Apollo 17 landing sites. They are inactive artifacts, not functioning vehicles. A fourth rover was built as a spare and did not fly to the Moon.</p></section>
+<section class="story-section"><h2>07 — Its Legacy</h2><p>The LRV showed that crewed lunar exploration could include mobile field science. It remains an example of engineering for vacuum, low gravity, extreme temperatures and dusty terrain.</p></section>
+<section class="story-section source-list"><h2>Explore the original records</h2><p>NASA sources used to check the mission history and facts:</p><ul><li><a href="https://nssdc.gsfc.nasa.gov/planetary/lunar/apollo_lrv.html" target="_blank" rel="noopener">NASA NSSDCA — The Apollo Lunar Roving Vehicle</a></li><li><a href="https://www.nasa.gov/mission/apollo-15/" target="_blank" rel="noopener">NASA — Apollo 15 mission</a></li><li><a href="https://www.nasa.gov/missions/apollo/apollo-16-mission-details/" target="_blank" rel="noopener">NASA — Apollo 16 mission details</a></li><li><a href="https://www.nasa.gov/missions/apollo/apollo-17-mission-details/" target="_blank" rel="noopener">NASA — Apollo 17 mission details</a></li></ul></section>
+<a class="back-link" href="index.html">← Return to the Forgotten Space archive</a>
+</main>
+<script>
+const events = [{"date": "July 26–30, 1971", "title": "Apollo 15 reaches the Moon", "description": "Apollo 15 launched on July 26 and landed on July 30. Its crew deployed and drove the first Lunar Roving Vehicle, opening a new chapter in lunar surface exploration."}, {"date": "July–August 1971", "title": "The first lunar rover traverses", "description": "David Scott and Jim Irwin used the rover on three traverses, covering about 27.8 kilometres and collecting geological observations and samples."}, {"date": "April 16–27, 1972", "title": "Apollo 16 explores the highlands", "description": "John Young and Charles Duke drove the second LRV about 26.7 kilometres while exploring the Descartes Highlands."}, {"date": "December 7–19, 1972", "title": "The final Apollo rover mission", "description": "Gene Cernan and Harrison Schmitt used the third LRV during Apollo 17, travelling about 35.9 kilometres in total."}, {"date": "After December 1972", "title": "Three rovers remain on the Moon", "description": "The vehicles were left at their respective Apollo landing sites when the astronauts departed. They remain on the lunar surface as historic artifacts."}];
+const holder = document.getElementById("timeline-buttons");
+const detail = document.getElementById("timeline-detail");
+function showEvent(i) {
+ const e=events[i];
+ detail.innerHTML=`<h3>${e.date} — ${e.title}</h3><p>${e.description}</p>`;
+ holder.querySelectorAll("button").forEach((b,n)=>b.classList.toggle("active",n===i));
+}
+events.forEach((e,i)=>{const b=document.createElement("button");b.type="button";b.textContent=e.date.split("—")[0].trim();b.addEventListener("click",()=>showEvent(i));holder.appendChild(b);});
+showEvent(0);
+fetch("https://images-api.nasa.gov/search?q=Apollo%20Lunar%20Roving%20Vehicle%20on%20Moon%20Apollo%2015&media_type=image&page_size=10")
+.then(r=>r.json()).then(data=>{
+ const items=data.collection?.items||[];
+ const item=items.find(x=>x.links?.some(l=>l.rel==="preview"));
+ if(item){
+  const preview=item.links.find(l=>l.rel==="preview");
+  document.getElementById("mission-image").src=preview.href;
+  document.getElementById("image-caption").textContent=(item.data?.[0]?.title||"NASA image")+" · NASA";
+ } else document.getElementById("image-caption").textContent="No image returned by NASA search. The story and timeline are still available.";
+}).catch(()=>document.getElementById("image-caption").textContent="NASA image search could not load. The story and timeline are still available.");
+</script>
+</body>
+</html>

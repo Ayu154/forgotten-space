@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Forgotten Space | NASA Space Apps</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <nav class="navbar">
+
+            <a href="#" class="logo">
+                FORGOTTEN<span>SPACE</span>
+            </a>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#destinations">Explore</a>
+                <a href="#artifacts">Artifacts</a>
+                <a href="#about">About</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">
+                    A MUSEUM BEYOND EARTH
+                </p>
+
+                <h1>
+                    THE MACHINES<br>
+                    THAT LEFT<br>
+                    THEIR MARK.
+                </h1>
+
+                <p class="hero-description">
+                    Their missions ended. Their stories didn't.
+                    Discover the forgotten machines that helped
+                    humanity explore the unknown.
+                </p>
+
+                <a href="#destinations" class="explore-button">
+                    BEGIN EXPLORATION →
+                </a>
+
+            </div>
+
+      
+
+        </section>
+
+
+        <!-- DESTINATIONS -->
+        <section class="destinations" id="destinations">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    CHOOSE YOUR DESTINATION
+                </p>
+
+                <h2>Where will you explore?</h2>
+
+                <p>
+                    Every destination holds machines,
+                    discoveries and untold stories.
+                </p>
+
+            </div>
+
+
+            <div class="destination-grid">
+
+                <button class="destination-card moon"
+                    data-filter="moon">
+
+                    <span class="destination-number">01</span>
+
+                    <span class="destination-info">
+                        <strong>THE MOON</strong>
+                        <small>Footprints of exploration</small>
+                    </span>
+
+                </button>
+
+
+                <button class="destination-card mars"
+                    data-filter="mars">
+
+                    <span class="destination-number">02</span>
+
+                    <span class="destination-info">
+                        <strong>MARS</strong>
+                        <small>Robotic pioneers</small>
+                    </span>
+
+                </button>
+
+
+                <button class="destination-card deep"
+                    data-filter="deep">
+
+                    <span class="destination-number">03</span>
+
+                    <span class="destination-info">
+                        <strong>DEEP SPACE</strong>
+                        <small>Beyond our solar system</small>
+                    </span>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ARTIFACTS -->
+        <section class="artifacts" id="artifacts">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    THE FORGOTTEN EXPLORERS
+                </p>
+
+                <h2>Meet the machines.</h2>
+
+                <p>
+                    Every machine has a story worth remembering.
+                </p>
+
+            </div>
+
+
+            <!-- FILTER BUTTONS -->
+            <div class="filter-buttons">
+
+                <button class="filter-btn active"
+                    data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn"
+                    data-filter="moon">
+                    Moon
+                </button>
+
+                <button class="filter-btn"
+                    data-filter="mars">
+                    Mars
+                </button>
+
+                <button class="filter-btn"
+                    data-filter="deep">
+                    Deep Space
+                </button>
+
+            </div>
+
+
+            <!-- ARTIFACT CARDS -->
+            <div class="artifact-grid">
+
+
+                <!-- APOLLO LUNAR ROVER -->
+                <article class="artifact-card"
+                    data-destination="moon">
+
+                    <div class="artifact-image lunar"
+                        data-nasa-search="Apollo 17 Lunar Roving Vehicle">
+
+                        <span>THE MOON</span>
+
+                    </div>
+
+                    <div class="artifact-info">
+
+                        <h3>Apollo Lunar Rover</h3>
+
+                        <p>
+                            The electric vehicle that helped
+                            astronauts explore the lunar surface.
+                        </p>
+
+                        <a href="apollo-lunar-rover.html">
+                            Discover its story →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SOJOURNER -->
+                <article class="artifact-card"
+                    data-destination="mars">
+
+                    <div class="artifact-image sojourner"
+                        data-nasa-search="Mars Pathfinder Sojourner rover">
+
+                        <span>MARS</span>
+
+                    </div>
+
+                    <div class="artifact-info">
+
+                        <h3>Sojourner</h3>
+
+                        <p>
+                            The tiny robotic pioneer that became
+                            the first successful Mars rover.
+                        </p>
+
+                       <a href="sojourner.html" class="explore-btn"> Discover its story →</a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SPIRIT -->
+                <article class="artifact-card"
+                    data-destination="mars">
+
+                    <div class="artifact-image spirit"
+                        data-nasa-search="Mars Exploration Rover Spirit">
+
+                        <span>MARS</span>
+
+                    </div>
+
+                    <div class="artifact-info">
+
+                        <h3>Spirit</h3>
+
+                        <p>
+                            A robotic geologist that transformed
+                            our understanding of ancient Mars.
+                        </p>
+
+                        <a href="spirit.html">
+                            Discover its story →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PIONEER 10 -->
+                <article class="artifact-card"
+                    data-destination="deep">
+
+                    <div class="artifact-image pioneer"
+                        data-nasa-search="Pioneer 10 spacecraft">
+
+                        <span>DEEP SPACE</span>
+
+                    </div>
+
+                    <div class="artifact-info">
+
+                        <h3>Pioneer 10</h3>
+
+                        <p>
+                            An early explorer that helped humanity
+                            investigate Jupiter and beyond.
+                        </p>
+
+                        <a href="pioneer-10.html">
+                            Discover its story →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+
+            <p class="eyebrow">
+                WHY WE REMEMBER
+            </p>
+
+            <h2>Exploration never truly ends.</h2>
+
+            <p>
+                Behind every discovery is a machine, an engineering
+                achievement and a story.
+
+                Forgotten Space preserves the legacy of these
+                explorers and the science they made possible.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>FORGOTTEN SPACE © 2026</p>
+
+        <p>Created for NASA Space Apps Challenge</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

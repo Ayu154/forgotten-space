@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spirit | Forgotten Space</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.story-page{max-width:1000px;margin:auto;padding:45px 24px 70px}
+.story-hero{text-align:center;padding:65px 20px 45px}
+.story-hero h1{font-size:clamp(2.5rem,6vw,4.5rem);margin:12px 0}
+.story-hero p{max-width:720px;margin:10px auto;line-height:1.8}
+.story-section{margin:55px 0;line-height:1.8}
+.story-section h2{margin-bottom:15px;color:#8ecbff}
+.story-image{width:100%;max-height:460px;min-height:220px;object-fit:cover;border-radius:16px;background:linear-gradient(135deg,#14243d,#263c58)}
+.image-caption{font-size:.85rem;opacity:.75;margin-top:8px}
+.fact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:15px;margin-top:22px}
+.fact{padding:20px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:12px}
+.fact strong{display:block;color:#8ecbff;margin-bottom:7px}
+.timeline{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0}
+.timeline button{background:rgba(255,255,255,.08);color:white;border:1px solid rgba(255,255,255,.2);padding:11px 15px;border-radius:24px;cursor:pointer}
+.timeline button:hover,.timeline button.active{background:#287fc4;border-color:#287fc4}
+.timeline-detail{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:15px;padding:23px;min-height:135px}
+.timeline-detail h3{color:#8ecbff;margin-bottom:9px}
+.source-list a,.back-link{color:#8ecbff}
+.back-link{display:inline-block;margin:25px 0;text-decoration:none}
+</style>
+</head>
+<body>
+<nav class="navbar"><a href="index.html" class="logo">FORGOTTEN<span>SPACE</span></a><a href="index.html">← Back to Home</a></nav>
+<header class="story-hero"><p class="eyebrow">THE MARS ARCHIVE · 2003–2011</p><h1>Spirit</h1><p>A robotic geologist that studied rocks, climbed hills and found evidence that ancient Mars had environments shaped by water.</p></header>
+<main class="story-page">
+<img class="story-image" id="mission-image" alt="Spirit">
+<p class="image-caption" id="image-caption">Searching NASA's Image and Video Library…</p>
+<section class="story-section"><h2>01 — The Beginning</h2><p>Spirit was one of NASA's twin Mars Exploration Rovers. It launched in 2003 and landed in Gusev Crater in January 2004. Its planned mission was about 90 Martian days, or sols. Spirit was sent to study rocks and soil for clues about Mars' watery past and to test technologies for mobile robotic exploration.</p></section>
+<section class="story-section"><h2>02 — Mission at a Glance</h2><div class="fact-grid"><div class="fact"><strong>Launch</strong>June 10, 2003</div><div class="fact"><strong>Mars landing</strong>January 4, 2004 (UTC)</div><div class="fact"><strong>Landing site</strong>Gusev Crater, Mars</div><div class="fact"><strong>Original mission</strong>About 90 Martian days</div><div class="fact"><strong>Distance travelled</strong>About 7.73 km</div><div class="fact"><strong>Mission declared complete</strong>May 25, 2011</div></div></section>
+<section class="story-section"><h2>03 — Interactive Mission Timeline</h2><p>Choose a milestone to follow this artifact's journey.</p><div class="timeline" id="timeline-buttons"></div><div class="timeline-detail" id="timeline-detail" aria-live="polite"></div></section>
+<section class="story-section"><h2>04 — What Did It Help Us Discover?</h2><p>Spirit found strong evidence that parts of ancient Mars had been altered by water. It examined rocks, soil and minerals with cameras and instruments, including a tool that ground into rock surfaces so scientists could study what was underneath. Its findings revealed a more complex geological history than the dry landscape visible today might suggest.</p></section>
+<section class="story-section"><h2>05 — Why Was It Left Behind?</h2><p>Spirit was designed to operate on Mars, not to return to Earth. In 2009 it became stuck in soft soil and could no longer drive to a position that would help it survive the Martian winter. After its last communication in March 2010, NASA continued trying to contact it before ending recovery efforts in May 2011.</p></section>
+<section class="story-section"><h2>06 — Where Is It Now?</h2><p>Spirit remains on Mars at a location in the western part of Gusev Crater, where it became stuck. It is inactive. NASA officially concluded efforts to contact the rover on May 25, 2011.</p></section>
+<section class="story-section"><h2>07 — Its Legacy</h2><p>Spirit operated for more than six years, far beyond its planned 90-sol mission. Together with its twin Opportunity, it transformed understanding of ancient Martian environments and demonstrated how long-lived mobile robots could conduct field geology on another planet.</p></section>
+<section class="story-section source-list"><h2>Explore the original records</h2><p>NASA sources used to check the mission history and facts:</p><ul><li><a href="https://science.nasa.gov/mission/mer-spirit/" target="_blank" rel="noopener">NASA Science — Spirit mission</a></li><li><a href="https://mars.nasa.gov/internal_resources/136/" target="_blank" rel="noopener">NASA — Mars Exploration Rover mission overview</a></li></ul></section>
+<a class="back-link" href="index.html">← Return to the Forgotten Space archive</a>
+</main>
+<script>
+const events = [{"date": "June 10, 2003", "title": "Spirit leaves Earth", "description": "NASA launched Spirit aboard a Delta II rocket from Cape Canaveral, Florida, beginning its journey to Mars."}, {"date": "January 4, 2004 (UTC)", "title": "Touchdown in Gusev Crater", "description": "Spirit landed in Gusev Crater. Its landing system used parachutes and airbags to help deliver the rover safely to the Martian surface."}, {"date": "February 2004", "title": "Spirit begins examining rocks", "description": "After an early computer-memory problem was resolved, Spirit resumed normal operations and began examining Martian rocks and soil."}, {"date": "2005", "title": "Climbing the Columbia Hills", "description": "Spirit explored the Columbia Hills, studying rocks and soil that revealed clues about past water-related processes on Mars."}, {"date": "March 22, 2010", "title": "The final communication", "description": "Spirit's final communication with Earth occurred in March 2010. The rover had become stuck and could not reposition itself to improve its chances of surviving the Martian winter."}, {"date": "May 25, 2011", "title": "NASA closes the mission", "description": "After months of attempts to re-establish contact, NASA ended efforts to communicate with Spirit and declared the mission complete."}];
+const holder = document.getElementById("timeline-buttons");
+const detail = document.getElementById("timeline-detail");
+function showEvent(i) {
+ const e=events[i];
+ detail.innerHTML=`<h3>${e.date} — ${e.title}</h3><p>${e.description}</p>`;
+ holder.querySelectorAll("button").forEach((b,n)=>b.classList.toggle("active",n===i));
+}
+events.forEach((e,i)=>{const b=document.createElement("button");b.type="button";b.textContent=e.date.split("—")[0].trim();b.addEventListener("click",()=>showEvent(i));holder.appendChild(b);});
+showEvent(0);
+fetch("https://images-api.nasa.gov/search?q=NASA%20Mars%20Exploration%20Rover%20Spirit%20rover%20on%20Mars&media_type=image&page_size=10")
+.then(r=>r.json()).then(data=>{
+ const items=data.collection?.items||[];
+ const item=items.find(x=>x.links?.some(l=>l.rel==="preview"));
+ if(item){
+  const preview=item.links.find(l=>l.rel==="preview");
+  document.getElementById("mission-image").src=preview.href;
+  document.getElementById("image-caption").textContent=(item.data?.[0]?.title||"NASA image")+" · NASA";
+ } else document.getElementById("image-caption").textContent="No image returned by NASA search. The story and timeline are still available.";
+}).catch(()=>document.getElementById("image-caption").textContent="NASA image search could not load. The story and timeline are still available.");
+</script>
+</body>
+</html>
